@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "gmracer/4_cylinder"
+	"$vertexcolor" 		1 
+	"$vertexalpha" 		1 
+	"$nolod" 		1 
+}

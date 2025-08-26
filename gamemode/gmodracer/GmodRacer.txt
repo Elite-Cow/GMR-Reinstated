@@ -1,0 +1,13 @@
+"gmodracertherevival"
+{
+    "base"              "base"
+	"title"		        "GmodRacer: The Revival"
+    "menusystem"		"1"	
+	"maps"              "^gmr_"
+	
+	"selectable"	    "0"
+    "description"	"GmodRacer - A old gmod 12 gamemode ported to gmod 13."
+	
+	"author_name"	"Unknown"
+	
+}

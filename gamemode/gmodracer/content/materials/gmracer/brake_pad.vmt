@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "gmracer/brake_pad"
+	"$vertexcolor" 		1 
+	"$vertexalpha" 		1 
+	"$nolod" 		1 
+}
