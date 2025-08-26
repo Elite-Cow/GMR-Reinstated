@@ -3,10 +3,15 @@ function GM.StartRace ( )
 	for k, v in pairs(player.GetAll()) do
 		umsg.Start("SetStartTime", v); umsg.End();
 		if v:GetNetworkedBool("IsCurrentlyRacing") then
-			if GAMEMODE.PlayerVehicles[v] and GAMEMODE.PlayerVehicles[v]:IsValid() and GAMEMODE.PlayerVehicles[v]:GetPhysicsObject():IsValid() then
-				--GAMEMODE.PlayerVehicles[v]:Freeze(true)
-				--GAMEMODE.PlayerVehicles[v]:GetPhysicsObjectNum(0):EnableMotion(true)
-				--GAMEMODE.PlayerVehicles[v]:SetKeyValue("BaseVehicle", "TurnOn")
+			if GAMEMODE.PlayerVehicles[v] and GAMEMODE.PlayerVehicles[v]:IsValid() then
+				local phys = GAMEMODE.PlayerVehicles[v]:GetPhysicsObject()
+				if phys and phys:IsValid() then
+					-- Unfreeze the vehicle and enable motion
+					GAMEMODE.PlayerVehicles[v]:Freeze(false)
+					phys:EnableMotion(true)
+					phys:Wake()
+					--GAMEMODE.PlayerVehicles[v]:SetKeyValue("BaseVehicle", "TurnOn")
+				end
 			end
 		end
 	end
